@@ -13,7 +13,6 @@ async function bootstrap() {
   app.setBaseViewsDir(path.join(__dirname, '..','template'))
   app.setViewEngine('ejs')
 
-  
   await app.listen(3000);
 }
 bootstrap();
