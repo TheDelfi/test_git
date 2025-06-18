@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { MainPageModule } from './main_page/main_page.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { User } from '../entities_DB/user_DB'
+import { LogCheckModule } from './log_check/log_check.module';
 
 
 @Module({
@@ -17,7 +18,8 @@ import { User } from '../entities_DB/user_DB'
         User
       ],
       synchronize:true
-    })
+    }),
+    LogCheckModule
   ],
 })
 export class AppModule {}
