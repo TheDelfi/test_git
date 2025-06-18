@@ -15,6 +15,7 @@ export class MainPageController {
 
     @Post('mainPOST')
     mainPost(@Body() body:any){
-        console.log(body)
+        
+        this.service.Create_new_user({name:body.value})
     }
 }
