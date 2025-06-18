@@ -1,4 +1,4 @@
-import { Controller, Get, Render } from '@nestjs/common';
+import { Body, Controller, Get, Post, Render } from '@nestjs/common';
 import { MainPageService } from './main_page.service';
 
 @Controller()
@@ -9,5 +9,12 @@ export class MainPageController {
     @Render('main')
     mainPage(){
         return {}
+    }
+
+
+
+    @Post('mainPOST')
+    mainPost(@Body() body:any){
+        console.log(body)
     }
 }
